@@ -1,0 +1,9 @@
+[package]
+authors = ["rise0chen <rise0chen@163.com>"]
+description = "dex_alerter"
+edition = "2018"
+license-file = "LICENSE"
+name = "dex_alerter"
+version = "0.0.1"
+
+[dependencies]
