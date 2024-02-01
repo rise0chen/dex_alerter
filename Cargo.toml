@@ -1,9 +1,15 @@
 [package]
 authors = ["rise0chen <rise0chen@163.com>"]
 description = "dex_alerter"
-edition = "2018"
+edition = "2021"
 license-file = "LICENSE"
 name = "dex_alerter"
 version = "0.0.1"
 
 [dependencies]
+clock_source = {version = "0.2", default-features = false}
+dexscreener = "0.2"
+reqwest = {version = "0.11", features = ["native-tls"]}
+serde = {version = "1", default-features = false, features = ["derive"]}
+serde_json = {version = "1", default-features = false}
+tokio = {version = "1", features = ["macros", "rt-multi-thread"]}

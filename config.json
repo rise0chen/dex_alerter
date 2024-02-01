@@ -1,0 +1,27 @@
+{
+    "alerters": [
+        {
+            "name": "stCORE",
+            "chain": "core",
+            "pair": "0x0c8ddc0952e6240af87cee374f02933cce9d0441",
+            "statistics": {
+                "m5": [],
+                "h1": [
+                    -5,
+                    5
+                ],
+                "h6": [],
+                "h24": []
+            },
+            "price_native": [
+                -1
+            ],
+            "price_usd": []
+        }
+    ],
+    "notifications": {
+        "emails": [
+            "rise0chen@163.com"
+        ]
+    }
+}
