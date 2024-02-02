@@ -4,19 +4,183 @@
             "name": "stCORE",
             "chain": "core",
             "pair": "0x0c8ddc0952e6240af87cee374f02933cce9d0441",
-            "statistics": {
-                "m5": [],
-                "h1": [
-                    -5,
-                    5
-                ],
-                "h6": [],
-                "h24": []
-            },
-            "price_native": [
-                -1
+            "statistic": [
+                {
+                    "period": "m5",
+                    "side": "down",
+                    "value": 1,
+                    "times": 1
+                }
             ],
-            "price_usd": []
+            "price": [
+                {
+                    "quote": "native",
+                    "side": "under",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "YPC",
+            "chain": "core",
+            "pair": "0xf900925996e5649eea255d7528b530097be757a7",
+            "statistic": [
+                {
+                    "period": "m5",
+                    "side": "down",
+                    "value": 30,
+                    "times": 1
+                },
+                {
+                    "period": "m5",
+                    "side": "up",
+                    "value": 30,
+                    "times": 1
+                }
+            ],
+            "price": []
+        },
+        {
+            "name": "AIDOGE",
+            "chain": "arbitrum",
+            "pair": "0x6a78e84fa0edad4d99eb90edc041cdbf85925961",
+            "statistic": [
+                {
+                    "period": "m5",
+                    "side": "down",
+                    "value": 6,
+                    "times": 1
+                },
+                {
+                    "period": "h1",
+                    "side": "down",
+                    "value": 10,
+                    "times": 1
+                }
+            ],
+            "price": []
+        },
+        {
+            "name": "AICODE",
+            "chain": "arbitrum",
+            "pair": "0xf900925996e5649eea255d7528b530097be757a7",
+            "statistic": [
+                {
+                    "period": "m5",
+                    "side": "up",
+                    "value": 50,
+                    "times": 1
+                },
+                {
+                    "period": "m5",
+                    "side": "up",
+                    "value": 100,
+                    "times": 1
+                }
+            ],
+            "price": [
+                {
+                    "quote": "usd",
+                    "side": "over",
+                    "value": 0.1
+                }
+            ]
+        },
+        {
+            "name": "APE",
+            "chain": "ethereum",
+            "pair": "0xac4b3dacb91461209ae9d41ec517c2b9cb1b7daf",
+            "statistic": [
+                {
+                    "period": "m5",
+                    "side": "down",
+                    "value": 0.2,
+                    "times": 2
+                },
+                {
+                    "period": "m5",
+                    "side": "up",
+                    "value": 0.2,
+                    "times": 2
+                },
+                {
+                    "period": "m5",
+                    "side": "down",
+                    "value": 1,
+                    "times": 1
+                },
+                {
+                    "period": "m5",
+                    "side": "up",
+                    "value": 1,
+                    "times": 1
+                }
+            ],
+            "price": []
+        },
+        {
+            "name": "CORE",
+            "chain": "core",
+            "pair": "0xbf312a6dea1b8086dfa1501044c9193f2b3d291c",
+            "statistic": [
+                {
+                    "period": "m5",
+                    "side": "down",
+                    "value": 0.2,
+                    "times": 2
+                },
+                {
+                    "period": "m5",
+                    "side": "up",
+                    "value": 0.2,
+                    "times": 2
+                },
+                {
+                    "period": "m5",
+                    "side": "down",
+                    "value": 1,
+                    "times": 1
+                },
+                {
+                    "period": "m5",
+                    "side": "up",
+                    "value": 1,
+                    "times": 1
+                }
+            ],
+            "price": []
+        },
+        {
+            "name": "MX",
+            "chain": "bsc",
+            "pair": "0x41f049d990d38305504631c9835f6f856bf1ba67",
+            "statistic": [
+                {
+                    "period": "m5",
+                    "side": "down",
+                    "value": 0.2,
+                    "times": 2
+                },
+                {
+                    "period": "m5",
+                    "side": "up",
+                    "value": 0.2,
+                    "times": 2
+                },
+                {
+                    "period": "m5",
+                    "side": "down",
+                    "value": 1,
+                    "times": 1
+                },
+                {
+                    "period": "m5",
+                    "side": "up",
+                    "value": 1,
+                    "times": 1
+                }
+            ],
+            "price": []
         }
     ],
     "notifications": {
