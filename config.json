@@ -10,6 +10,12 @@
                     "side": "down",
                     "value": 1,
                     "times": 1
+                },
+                {
+                    "period": "m5",
+                    "side": "up",
+                    "value": 1,
+                    "times": 1
                 }
             ],
             "price": [
@@ -21,24 +27,37 @@
             ]
         },
         {
-            "name": "YPC",
+            "name": "YPC_CORE",
             "chain": "core",
             "pair": "0xf900925996e5649eea255d7528b530097be757a7",
             "statistic": [
                 {
                     "period": "m5",
                     "side": "down",
-                    "value": 30,
+                    "value": 10,
                     "times": 1
-                },
+                }
+            ]
+        },
+        {
+            "name": "YPC_BRISE",
+            "chain": "bitgert",
+            "pair": "0x81217662b63fc4631b0e32ea77781148044dd8fb",
+            "statistic": [
                 {
                     "period": "m5",
-                    "side": "up",
-                    "value": 30,
+                    "side": "down",
+                    "value": 10,
                     "times": 1
                 }
             ],
-            "price": []
+            "liquidity": [
+                {
+                    "token": "base",
+                    "side": "under",
+                    "value": 5096754503839
+                }
+            ]
         },
         {
             "name": "AIDOGE",

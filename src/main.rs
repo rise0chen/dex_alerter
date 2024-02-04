@@ -123,6 +123,42 @@ async fn main() {
                     }
                 }
             }
+
+            for alert in alerter.liquidity.iter_mut() {
+                let liquidity = if let Some(liquidity) = &pair.liquidity {
+                    match alert.token {
+                        config::LiquidityToken::Quote => liquidity.quote,
+                        config::LiquidityToken::Base => liquidity.base,
+                        config::LiquidityToken::Usd => liquidity.usd,
+                    }
+                } else {
+                    continue;
+                };
+                let liquidity_old = if let Some(last) = alert.last_value {
+                    last
+                } else {
+                    match alert.side {
+                        config::PriceSide::Over => f64::MIN,
+                        config::PriceSide::Under => f64::MAX,
+                    }
+                };
+                match alert.side {
+                    config::PriceSide::Over => {
+                        if liquidity > alert.value && liquidity_old < alert.value {
+                            alert.last_value = Some(liquidity);
+                            let msg = format!("{} LP over: {}{:?}", alerter.name, liquidity, alert.token);
+                            noticer.notice(&msg).await;
+                        }
+                    }
+                    config::PriceSide::Under => {
+                        if liquidity < alert.value && liquidity_old > alert.value {
+                            alert.last_value = Some(liquidity);
+                            let msg = format!("{} LP under: {}{:?}", alerter.name, liquidity, alert.token);
+                            noticer.notice(&msg).await;
+                        }
+                    }
+                }
+            }
         }
 
         tokio::time::sleep(Duration::from_secs(PERIOD)).await;

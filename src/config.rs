@@ -41,13 +41,34 @@ pub struct PriceAlerter {
     pub value: f64,
 }
 
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub enum LiquidityToken {
+    /// Native,计价token
+    Quote,
+    /// 标的
+    Base,
+    Usd,
+}
+#[derive(Clone, Serialize, Deserialize)]
+pub struct LiquidityAlerter {
+    pub token: LiquidityToken,
+    pub side: PriceSide,
+    pub value: f64,
+    pub last_value: Option<f64>,
+}
+
 #[derive(Clone, Serialize, Deserialize)]
 pub struct Alerter {
     pub name: String,
     pub chain: String,
     pub pair: String,
+    #[serde(default)]
     pub statistic: Vec<StatisticAlerter>,
+    #[serde(default)]
     pub price: Vec<PriceAlerter>,
+    #[serde(default)]
+    pub liquidity: Vec<LiquidityAlerter>,
 }
 
 #[derive(Clone, Serialize, Deserialize)]
